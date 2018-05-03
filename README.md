@@ -23,6 +23,7 @@ __Inputs/Outputs:__
 
 
 __Usage:__
+
 While recording acoustic instruments with more than 2 microphones/inputs, a project with a lot of tracks becomes very complex, especially while using monotracks and sub busses. That the main reason I wrote Mixer4x. 
 
 How to use it (e.g. with Ardour):
