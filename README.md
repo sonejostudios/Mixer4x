@@ -51,7 +51,7 @@ __Build/Install:__
 
 
 __LV2:__
-* An LV2 Build with presets can be found under releases: https://github.com/sonejostudios/Mixer4x/releases
+* An LV2 Build can be found under releases: https://github.com/sonejostudios/Mixer4x/releases
 * Unpack LV2 build in your LV2 folder, e.g ~/.lv2
 
 
