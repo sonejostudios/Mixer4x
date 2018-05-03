@@ -2,7 +2,7 @@
 A simple 4-channel stereo mixer
 
 
-![screenshot](https://raw.githubusercontent.com/sonejostudios/Panoramix/master/Panoramix11.png "Panoramix (Ardour)")
+![screenshot](https://raw.githubusercontent.com/sonejostudios/Mixer4x/master/Mixer4x.png "Mixer4x (Ardour)")
 
 
 
