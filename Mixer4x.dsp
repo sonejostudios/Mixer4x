@@ -1,5 +1,5 @@
 declare name        "Mixer4x";
-declare version     "1.0";
+declare version     "1.1";
 declare author      "Vincent Rateau";
 declare license     "GPL v3";
 declare reference   "www.sonejo.net";
@@ -20,16 +20,16 @@ mixerstrip(i) = vgroup("%i", phaseinvert(i) : mute(i) :  hgroup("[3]", volume(i)
 // mixer stip
 phaseinvert(i, a) = select2(checkbox("[1]phase invert %i"),a,-a) ;
 mute(i) = _ * (1-checkbox("[5]mute %i"):s) ;
-volume(i) = _ * (vslider("[3]vol %i",1,0,1.5,0.01):s) ;
-pan(i, a, b) = (a*(1-panner(i):sqrt)), (a*(panner(i):sqrt))
-with{
-      panner(i) = hslider("[4]pan %i [style: knob]",0.5,0,1,0.01):s;
-    };
+volume(i) = _ * (vslider("[3]vol %i[unit:dB]",0,-70,10,0.01) : ba.db2linear : s) ;
+pan(i, a, b) = sqrt(c)*a, sqrt(1-c)*b
+			with {
+				c=(nentry("[3]pan %i [style:knob]",0,-100,100,1)-100.0)/-200.0 : s;
+};
 
 
 //master
 master = vgroup("[3]", _*mastervol, _*mastervol : mute_all, mute_all ) : vu, vu ;
-mastervol = vslider("[3]master",1,0,1.5,0.01):s ;
+mastervol = vslider("[3]master[unit:dB]",0,-70,10,0.01) : ba.db2linear : s ;
 
 mute_all = _ * (1-checkbox("[5]mute"):s) ;
 

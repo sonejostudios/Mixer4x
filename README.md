@@ -2,7 +2,7 @@
 A simple 4-channel stereo mixer.
 The main goal is to use it as a submixer on a 4 channel track, but you can use it everywhere you need a small 4 channel stereo mixer.
 
-![screenshot](https://raw.githubusercontent.com/sonejostudios/Mixer4x/master/Mixer4x.png "Mixer4x (Ardour)")
+![screenshot](https://raw.githubusercontent.com/sonejostudios/Mixer4x/master/Mixer4x11.png "Mixer4x (Ardour)")
 
 
 
